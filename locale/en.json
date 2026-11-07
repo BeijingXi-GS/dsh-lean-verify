@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Lean Formal Verification",
+    "description": "Turns math, CS, geometry and computation problems into Lean 4 formalizations and checks them with the real Lean kernel (compilation + axiom audit) to verify answers and conjectures; includes toolchain installation, a Mathlib project scaffold and a formalization skill."
+  }
+}

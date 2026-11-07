@@ -1,0 +1,44 @@
+{
+  "name": "dsh-lean-verify",
+  "version": "0.1.0",
+  "description": "Lean 形式化论证：把数学/计算机/几何/计算问题转成 Lean 4 陈述，用真实 Lean 内核做编译与公理检查，给出「已验证 / 含 sorry / 失败 / 条件证明」判定；含工具链下载、Mathlib 工程脚手架与形式化协议技能。",
+  "type": "module",
+  "license": "MIT",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "lib/",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "skills/",
+    "scripts/",
+    "README.md"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "node --test tests/",
+    "test:direct": "node tests/parse.test.mjs && node tests/mathlib.test.mjs && node tests/lean.test.mjs"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "lean",
+    "formal-verification",
+    "mathlib"
+  ]
+}
